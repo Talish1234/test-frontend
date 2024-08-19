@@ -11,7 +11,7 @@ function App() {
       const res = await axios.get(`${BASE}/cookie`,{withCredentials:true});
       console.log(res.data.success);
      if(res.data.success)
-       setCookie("value");
+        setCookie('token', 'hiIAmCookie', { path: '/' });
     } catch (error) {
       console.log(error);
     }
