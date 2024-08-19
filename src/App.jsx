@@ -4,14 +4,12 @@ import './App.css';
 import { useCookies } from 'react-cookie';
 function App() {
   const [count, setCount] = useState(0);
-  const BASE = "https://test-backend-git-main-mohd-talish-ansaris-projects.vercel.app";
+  const BASE = "https://test-backend-eight-beta.vercel.app";
   const [cookies, setCookie, removeCookie] = useCookies(['token']);
   const handleClick = async () => {
     try {
       const res = await axios.get(`${BASE}/cookie`,{withCredentials:true});
       console.log(res.data.success);
-     if(res.data.success)
-        setCookie('token', 'hiIAmCookie', { path: '/' });
     } catch (error) {
       console.log(error);
     }
