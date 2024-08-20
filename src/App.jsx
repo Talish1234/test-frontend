@@ -8,7 +8,7 @@ function App() {
   
   const handleClick = async () => {
     try {
-      const res = await axios.get(`${BASE}/cookie`,{withCredentials:true});
+      const res = await axios.get(`${BASE}/cookie`,{withCredentials: true});
       console.log(res.data.success);
     } catch (error) {
       
@@ -17,7 +17,7 @@ function App() {
 
   const handleget = async () => {
     try {
-      const res = await axios.get(`${BASE}/getcookie`,{withCredentials:true});
+      const res = await axios.get(`${BASE}/getcookie`,{withCredentials: true});
       
      setCount(res.data.val);
      
