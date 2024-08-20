@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <button onClick={handleClick}>onClick</button>
-<h1>count</h1>
+<h1>{count}</h1>
       <button onClick={handleget}>onClick</button>
     </>
   );
